@@ -32,7 +32,7 @@ try:
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
     # convert the data in tabular format
     streamlit.dataframe(fruityvice_normalized)
-except URLError as:
+except URLError as e:
   streamlit.error()
 streamlit.stop()
 
